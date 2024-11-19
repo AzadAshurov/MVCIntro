@@ -1,0 +1,27 @@
+﻿@using MVCIntro.ViewModels
+  @model HomeVM
+<table border="1">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Color</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+             <td>@product.Category</td>
+                <td><img src="@product.Image"></td>
+              <td>@product.Name</td>
+                <td>@product.Description</td>
+              <td>@product.Price</td>
+                <td>@product.Color</td>
+            </tr>
+        }
+    </tbody>
+</table>
